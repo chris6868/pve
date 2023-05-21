@@ -20,7 +20,7 @@ bash -c  "$(curl -fsSL https://ghproxy.com/https://raw.githubusercontent.com/chr
 ```
 - ### 开启ssh+BBR+root登录+密码设置
 ```
-bash -c  "$(curl -fsSL https://raw.githubusercontent.com/shidahuilang/pve/main/lang.sh)"
+bash -c  "$(curl -fsSL https://raw.githubusercontent.com/chris6868/pve/main/lang.sh)"
 ```
 - ### (centos、ubuntu、debian、alpine)一键开启SSH
 ```sh
@@ -32,7 +32,7 @@ wget -qO ch_cpuinfo_cn.sh https://ghproxy.com/https://raw.githubusercontent.com/
 ```
 - 黑群晖自动挂载洗白(挂载目录/tmp/boot)
 ```
-bash -c  "$(curl -fsSL https://ghproxy.com/https://github.com/shidahuilang/pve/blob/main/Synology.sh)"
+bash -c  "$(curl -fsSL https://ghproxy.com/https://github.com/chris6868/pve/blob/main/Synology.sh)"
 ```
 
 - ### PVE升级系统
