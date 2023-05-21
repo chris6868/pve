@@ -42,4 +42,4 @@ apt update && apt dist-upgrade -y
 
 
 
-根据https://github.com/shidahuilang/pve 修改相关参数弄成自己适配的版本
+根据https://github.com/shidahuilang/pve 修改相关参数成适配版本
