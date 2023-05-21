@@ -112,7 +112,7 @@ cat > $tmpf << 'EOF'
           itemId: 'nvme_ssd-temperatures',
           colspan: 2,
           printBar: false,
-          title: gettext('NVME硬盘'),
+          title: gettext('系统硬盘'),
           textField: 'nvme_ssd_temperatures',
           renderer:function(value){
           if (value.length > 0) {
@@ -142,7 +142,7 @@ cat > $tmpf << 'EOF'
           itemId: 'hdd-temperatures',
           colspan: 2,
           printBar: false,
-          title: gettext('SATA硬盘'),
+          title: gettext('数据硬盘'),
           textField: 'hdd_temperatures',
           renderer:function(value){
           if (value.length > 0) {
