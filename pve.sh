@@ -456,8 +456,8 @@ echo pve版本$pvever
 # 生成系统变量
 therm='$res->{thermalstate} = `sensors`;';
 cpure='$res->{cpusensors} = `lscpu | grep MHz`;';
-m2temp='$res->{nvme_ssd_temperatures} = `smartctl -a /dev/nvme?|grep -E "Model Number|Total NVM Capacity|Temperature:|Percentage|Data Unit|Power On Hours"`;';
-hddtempe='$res->{hdd_temperatures} = `smartctl -a /dev/sd?|grep -E "Device Model|Capacity|Power_On_Hours|Temperature"`;';
+m2temp='$res->{nvme_ssd_temperatures} = `smartctl -a /dev/sda?|grep -E "Model Number|Total NVM Capacity|Temperature:|Percentage|Data Unit|Power On Hours"`;';
+hddtempe='$res->{hdd_temperatures} = `smartctl -a /dev/sdb?|grep -E "Device Model|Capacity|Power_On_Hours|Temperature"`;';
 
 
 ###################  修改node.pm   ##########################
