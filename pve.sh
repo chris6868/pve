@@ -483,10 +483,10 @@ cat > $tmpf << 'EOF'
               const c1 = value.match(/Core 1.*?\+([\d\.]+)Â/)[1];  // CPU核心2温度
               const c2 = value.match(/Core 2.*?\+([\d\.]+)Â/)[1];  // CPU核心3温度
               const c3 = value.match(/Core 3.*?\+([\d\.]+)Â/)[1];  // CPU核心4温度
-              // const b0 = value.match(/temp1.*?\+([\d\.]+)?/)[1];  // 主板温度
-              // const b1 = value.match(/temp2.*?\+([\d\.]+)?/)[1];  // 主板温度2
-              return ` 核心1: ${c0} ℃ | 核心2: ${c1} ℃ | 核心3: ${c2} ℃ | 核心4: ${c3} ℃ `  // 不带主板温度
-              // return `Package: ${p0} ℃ || 核心1: ${c0} ℃ | 核心2: ${c1} ℃ | 核心3: ${c2} ℃ | 核心4: ${c3} ℃ || 主板: ${b0} ℃ | ${b1} ℃ `  // 带主板温度
+              const b0 = value.match(/temp1.*?\+([\d\.]+)?/)[1];  // 主板温度
+              const b1 = value.match(/temp2.*?\+([\d\.]+)?/)[1];  // 主板温度2
+              // return ` 核心1: ${c0} ℃ | 核心2: ${c1} ℃ | 核心3: ${c2} ℃ | 核心4: ${c3} ℃ `  // 不带主板温度
+              return `Package: ${p0} ℃ || 核心1: ${c0} ℃ | 核心2: ${c1} ℃ | 核心3: ${c2} ℃ | 核心4: ${c3} ℃ || 主板: ${b0} ℃ | ${b1} ℃ `  // 带主板温度
             }
     },
 	{
@@ -523,7 +523,7 @@ cat > $tmpf << 'EOF'
           itemId: 'nvme_ssd-temperatures',
           colspan: 2,
           printBar: false,
-          title: gettext('NVME硬盘'),
+          title: gettext('固态硬盘'),
           textField: 'nvme_ssd_temperatures',
           renderer:function(value){
           if (value.length > 0) {
@@ -552,7 +552,7 @@ cat > $tmpf << 'EOF'
           itemId: 'hdd-temperatures',
           colspan: 2,
           printBar: false,
-          title: gettext('SATA硬盘'),
+          title: gettext('机械硬盘'),
           textField: 'hdd_temperatures',
           renderer:function(value){
           if (value.length > 0) {
